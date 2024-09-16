@@ -1,0 +1,28 @@
+﻿@model MeetingInfo
+
+@{
+
+    ViewBag.Title = "Başvuru Bilgisi";
+    Layout = "_Layout";
+}
+
+
+<main class="text-center">
+    <h1 class="h4">@ViewBag.Selamlama - Oluşumumuza Hoşgeldiniz.</h1>
+    <p>Oluşuma Katılacak mısınız ? Eğer katılmazsan reis bunu görür.</p>
+
+    <div class="card my-2">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model.Location</li>
+            <li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss")</li>
+            <li class="list-group-item">@Model.NumberOfPeople Katılımcı</li>
+
+        </ul>
+    </div>
+
+    <a class="btn-sm btn btn-outline-primary" asp-action="Apply" asp-controller="Meeting">Başvuru Yap</a>
+</main>
+
+
+
+
